@@ -61,9 +61,11 @@ $side_menu=\yii\helpers\Json::decode(M1000::find()->findMenu('hrd')->one()->jval
                             return Html::img(Yii::getAlias('@HRD_EMP_UploadUrl') . '/'. $data->EMP_IMG, ['width'=>'40']);
                         },
             ],
-            */
+            */ 'EMP_IMG',
 				'KAR_ID',
 				'KAR_NM',
+            'DEP_ID',
+            'CORP_ID', 'CAB_ID', 'JAB_ID','KAR_STS','KAR_TGLK',
 /*
             [
 				//Author -ptr.nov-

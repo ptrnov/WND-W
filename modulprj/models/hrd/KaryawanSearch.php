@@ -56,12 +56,12 @@ class KaryawanSearch extends Karyawan
     public function search($params)
     {	
 		// [5.1] JOIN TABLE
-		$query = Karyawan::find();
+		$query = Karyawan::find()
 						 //->JoinWith('corpOne',true,'LEFT JOIN')
                          //->JoinWith('deptOne',true,'left JOIN')
 						 //->JoinWith('jabOne',true,'left JOIN')
 						 //->JoinWith('sttOne',true,'left JOIN')
-						 //->where(['a0001.status' => 0]);
+						 ->where('karyawan.KAR_STS<> 3');
 						 // SUB JOIN
 						//$query->leftJoin(['company'=>$queryCop],'company.CORP_ID=a0001.EMP_CORP_ID');//->orderBy(['company.CORP_ID'=>SORT_ASC]);
 						 //->andFilterWhere(['EMP_ID'=>'006']);
